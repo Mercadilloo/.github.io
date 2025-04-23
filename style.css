@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(86, 80, 80);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition-duration: 2s;
+    transition: transform 3s;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.carousel-images img {
+    width: 1200px; /* o 1200px si quieres el tamaño completo */
+    height: 1200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px; /* opcional */
+  }
+  
+.container {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.Seccion1 {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 0;
+}
+
+.Seccion1 a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.Seccion1{
+    justify-content: right;
+   
+}
+
+.Seccion1 a h2:hover {
+    text-decoration: none;
+    color: bisque;
+    transition-duration: 2s;
+    transition: 2s;
+    
+}
+
+.Seccion1 a:hover {
+    color: rgb(92, 158, 158);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.titulo {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.subtitulo {
+    font-size: 1.8em;
+    padding-bottom: 15px;
+}
+
+.Seccion2 {
+    padding: 20px 5%;
+
+}
+
+.compras-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.compra-item {
+    border: 1px  rgb(80, 80, 80);
+    border-style: dotted;
+    border-radius: 3%;
+    padding: 15px;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 12px 0.8px rgba(191,191,191,1);
+    -moz-box-shadow: 0px 0px 12px 0.8px rgba(191,191,191,1);
+    caja-sombra: 0px 0px 12px 0.8px rgba(191,191,191,1);
+    transition: transform 0.3s;
+    box-shadow: 1px -16 px ghostwhite;
+}
+
+.compra-item h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.compra-item #Talla{
+    text-align: left;
+    transition: transform 0.3s;
+    font-weight: bolder;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: #4b4b4b;
+}
+
+.compra-item:hover {
+    transform: scale(1.05);
+}
+
+.precio{
+    font-size: 23px;
+    
+}
+
+.compra-item img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #4b4b4b;
+    position: relative;
+    bottom: 0;
+    width: 100%;s
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .Seccion1 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .titulo {
+        font-size: 2em;
+    }
+
+    .subtitulo {
+        font-size: 1.5em;
+    }
+
+    .compras-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .compra-item {
+        padding: 10px; 
+    }
+
+    .compra-item img {
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.5em;
+    }
+
+    .subtitulo {
+        font-size: 1.2em;
+    }
+
+    .compras-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .compra-item {
+        padding: 8px; 
+    }
+
+    .talla{
+        padding-right: 200px;
+    
+    }
+}
+
+.carousel {
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    border-radius: 10px;    
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 5px;
+    min-width: 100%;
+    box-sizing: border-box;
+    display: block;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
+  }
+  
+.carousel-container {
+    overflow: hidden;
+  }
+  
+
+.carousel-btn.prev {
+    left: 5px;
+}
+
+.carousel-btn.next {
+    right: 5px;
+}
