@@ -261,3 +261,52 @@ main {
 .carousel-btn.next {
     right: 5px;
 }
+
+.btn_compra a, .btn_compra p {
+    background-color: transparent;
+}
+
+.btn_compra a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 100px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: black;
+    text-decoration: none;
+    border: 1.3px solid black;
+    background: white;
+    overflow: hidden;
+    transition: color 0.4s ease;
+}
+
+.btn_compra a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #9a9a9a;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+.btn_compra a:hover::before {
+    left: 0;
+}
+
+.btn_compra a:hover {
+    color: white;
+}
+
+.btn_compra a span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn_compra a,.btn_compra span{
+    background: transparent;
+
+}
